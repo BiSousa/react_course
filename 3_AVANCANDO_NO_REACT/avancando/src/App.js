@@ -12,12 +12,19 @@ import ExecuteFunction from "./components/ExecuteFunction";
 import MessageState from "./components/MessageState";
 import ChangeMessageState from "./components/ChangeMessageState";
 import { useState } from "react";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   const cars = [
     { id: 1, brand: "Ferrari", color: "Laranja", newCar: true, km: 1 },
     { id: 2, brand: "KIA", color: "Vermelho", newCar: false, km: 2 },
     { id: 3, brand: "Renault", color: "Branco", newCar: false, km: 3 },
+  ];
+
+  const pessoas = [
+    { id: 1, nome: "Bia", idade: 20, profissao: "Trainee" },
+    { id: 2, nome: "Carlos", idade: 17, profissao: "Desenvolvedor" },
+    { id: 3, nome: "Ana", idade: 23, profissao: "Designer" },
   ];
 
   function showMessage() {
@@ -85,6 +92,7 @@ function App() {
       {/* state lift */}
       <MessageState msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      <UserDetails dados={pessoas} />
     </div>
   );
 }
