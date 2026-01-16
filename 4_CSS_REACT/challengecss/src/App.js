@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Data from "./components/Data";
 
 function App() {
+  const carros = [
+    { id: 1, nome: "Polo", marca: "Volkswagen", ano: 2020 },
+    { id: 2, nome: "Corolla", marca: "Toyota", ano: 2021 },
+    { id: 3, nome: "Civic", marca: "Honda", ano: 2019 },
+    { id: 4, nome: "Fit", marca: "Honda", ano: 2018 },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Projeto Carros</h1>
+      <Data myData={carros} />
     </div>
   );
 }
