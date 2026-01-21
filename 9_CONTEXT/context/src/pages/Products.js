@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CounterContext } from "../context/CounterContext";
+import { useTitleColorContext } from "../hooks/useTitleColorContext";
 
 const Products = () => {
-  return <div>Products</div>;
+  const { counter } = useContext(CounterContext);
+
+  const { color } = useTitleColorContext();
+
+  return (
+    <div>
+      <h1 style={{ color: color }}>Products</h1>
+      <p>Valor do contador: {counter}</p>
+    </div>
+  );
 };
 
 export default Products;
