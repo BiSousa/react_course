@@ -19,6 +19,21 @@
       "id": "5069",
       "name": "Camiseta",
       "price": "30"
+    },
+    {
+      "id": "c157",
+      "name": "Short",
+      "price": "40"
+    },
+    {
+      "id": "1f6e",
+      "name": "Tênis",
+      "price": "160"
+    },
+    {
+      "id": "d4cb",
+      "name": "Boné",
+      "price": "25"
     }
   ]
 }
